@@ -15,10 +15,12 @@ const Experience = () => {
         <div className="grid md:grid-cols-2 gap-12 md:gap-16 items-center">
           <FadeContent duration={800} threshold={0.2} blur>
             <div className="relative">
-              {/* Photo placeholder */}
-              <div className="aspect-[4/3] rounded-2xl bg-sage-50 border-2 border-dashed border-sage-200 flex flex-col items-center justify-center text-sage-300">
-                <Image size={48} strokeWidth={1} />
-                <span className="mt-3 text-sm font-medium">Photo</span>
+              <div className="aspect-[4/3] rounded-2xl overflow-hidden group cursor-pointer">
+                <img
+                  src="https://res.cloudinary.com/dnv13bm7j/image/upload/v1773841760/poto2_fj4ya0.png"
+                  alt="Facebook Portal Device"
+                  className="w-full h-full object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105"
+                />
               </div>
               <div className="absolute -bottom-4 -left-4 w-full h-full rounded-2xl border-2 border-sage-100 -z-10" />
             </div>
