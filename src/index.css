@@ -1,0 +1,148 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: 40 100% 99%;
+    --foreground: 0 0% 23%;
+    --card: 0 0% 100%;
+    --card-foreground: 0 0% 23%;
+    --popover: 0 0% 100%;
+    --popover-foreground: 0 0% 23%;
+    --primary: 100 20% 35%;
+    --primary-foreground: 0 0% 100%;
+    --secondary: 40 33% 95%;
+    --secondary-foreground: 0 0% 23%;
+    --muted: 40 33% 95%;
+    --muted-foreground: 100 8% 55%;
+    --accent: 40 33% 95%;
+    --accent-foreground: 0 0% 23%;
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 0 0% 98%;
+    --border: 90 14% 88%;
+    --input: 90 14% 88%;
+    --ring: 100 20% 35%;
+    --radius: 0.75rem;
+  }
+
+  * {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+  }
+
+  html {
+    scroll-behavior: smooth;
+  }
+
+  body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    line-height: 1.7;
+    color: #3A3A3A;
+    background-color: #FFFDF9;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  ::selection {
+    background-color: rgba(90, 110, 75, 0.15);
+    color: #455638;
+  }
+}
+
+@layer components {
+  .section-label {
+    @apply inline-block px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.15em] rounded-full;
+    background: #E8EBE4;
+    color: #5A6E4B;
+  }
+
+  .btn-primary {
+    @apply relative inline-flex items-center justify-center px-8 py-4 font-semibold text-white rounded-full overflow-hidden transition-all duration-300;
+    background: #5A6E4B;
+  }
+  .btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(90, 110, 75, 0.25);
+    background: #455638;
+  }
+
+  .btn-secondary {
+    @apply relative inline-flex items-center justify-center px-8 py-4 font-semibold rounded-full overflow-hidden transition-all duration-300;
+    background: transparent;
+    border: 2px solid #C8D1C0;
+    color: #5A6E4B;
+  }
+  .btn-secondary:hover {
+    background: #E8EBE4;
+    border-color: #5A6E4B;
+    transform: translateY(-2px);
+  }
+
+  .card {
+    @apply relative rounded-2xl p-8 transition-all;
+    transition-duration: 400ms;
+    background: #FFFFFF;
+    border: 1px solid #E8EBE4;
+    box-shadow: 0 2px 12px rgba(0, 0, 0, 0.04);
+  }
+  .card:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.08);
+  }
+
+  .input-field {
+    @apply w-full px-6 py-4 rounded-xl text-base transition-all duration-300;
+    background: #FBF7F0;
+    border: 2px solid transparent;
+    color: #3A3A3A;
+  }
+  .input-field:focus {
+    outline: none;
+    border-color: #5A6E4B;
+    box-shadow: 0 0 0 4px rgba(90, 110, 75, 0.1);
+  }
+  .input-field::placeholder {
+    color: #9CAA8E;
+  }
+
+  .section {
+    @apply py-24 md:py-32 px-6;
+  }
+
+  .container {
+    @apply max-w-6xl mx-auto;
+  }
+
+  .genre-tag {
+    @apply px-3 py-1 text-xs font-medium rounded-full transition-all duration-300;
+    background: #E8EBE4;
+    color: #5A6E4B;
+  }
+}
+
+/* Reduced Motion */
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* Focus Visible */
+a:focus-visible, button:focus-visible, input:focus-visible, textarea:focus-visible {
+  outline: 2px solid #5A6E4B;
+  outline-offset: 2px;
+}
+
+/* Scrollbar */
+::-webkit-scrollbar { width: 8px; }
+::-webkit-scrollbar-track { background: #FBF7F0; }
+::-webkit-scrollbar-thumb {
+  background: #C8D1C0;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover { background: #9CAA8E; }
