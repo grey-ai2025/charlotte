@@ -34,16 +34,22 @@ const About = () => {
                 and mother of three.
               </p>
               <p className="text-charcoal-700/80 leading-relaxed">
-                Charlotte is the owner of{' '}
+                Charlotte is the founder of{' '}
                 <span className="font-semibold text-sage-600">Grey AI</span>, a company that
                 advises companies, funds and individuals on matters of AI strategy, literacy,
                 policy, governance and implementation.
               </p>
               <p className="text-charcoal-700/80 leading-relaxed">
-                Before Grey AI, she served as a senior executive at a global SaaS company,
-                where she built and led its product, privacy and regulatory strategy and legal
-                functions, embedding innovation and direction into the company's core product
-                and global expansion strategy.
+                After working for a hardware manufacturer, Charlotte expanded into software and
+                earned her stripes as a tech lawyer at Facebook (Meta), where she counseled the
+                team building the company's first Facebook-branded hardware product, Portal —
+                a device that leveraged AI to power its smart mic and camera.
+              </p>
+              <p className="text-charcoal-700/80 leading-relaxed">
+                She then served as a senior executive at a global SaaS company, where she built
+                and led its product, privacy and regulatory strategy and legal functions,
+                embedding innovation and direction into the company's core product and global
+                expansion strategy.
               </p>
             </div>
           </FadeContent>

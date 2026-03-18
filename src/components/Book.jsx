@@ -76,7 +76,7 @@ const Book = () => {
 
               <div className="flex flex-col sm:flex-row gap-4 pt-2">
                 <Link
-                  to="/contact"
+                  to="https://www.brainybilly.com/"
                   className="btn-primary text-sm inline-flex items-center gap-2"
                 >
                   <ExternalLink size={16} />

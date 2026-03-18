@@ -5,7 +5,7 @@ import { Menu, X } from 'lucide-react'
 
 const navLinks = [
   { label: 'Book', to: '/book' },
-  { label: 'Contact', to: '/contact' },
+  
 ]
 
 const Header = () => {

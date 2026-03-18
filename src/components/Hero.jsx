@@ -53,7 +53,7 @@ const Hero = () => {
           transition={{ duration: 0.6, delay: 1.0 }}
           className="text-sm md:text-base text-sage-500 font-medium tracking-wide mb-10"
         >
-          Former Meta executive &middot; AI speaker since 2018 &middot; Founder of Grey AI
+          Former Meta tech lawyer &middot; AI speaker since 2018 &middot; Founder of Grey AI
         </motion.p>
 
         <motion.div

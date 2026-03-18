@@ -39,7 +39,7 @@ const Contact = () => {
       setTimeout(() => setIsSuccess(false), 5000)
     } catch (err) {
       trackFormSubmission('contact', false)
-      setError('Something went wrong. Please try again or email hello@charlottelewisjones.com directly.')
+      setError('Something went wrong. Please try again or email charlotte@greyaiadvisors.com directly.')
     } finally {
       setIsSubmitting(false)
     }
@@ -69,7 +69,7 @@ const Contact = () => {
 
               <div className="space-y-5">
                 <a
-                  href="mailto:hello@charlottelewisjones.com"
+                  href="mailto:charlotte@greyaiadvisors.com"
                   className="flex items-center gap-4 group"
                 >
                   <div className="w-12 h-12 rounded-xl bg-sage-500 flex items-center justify-center flex-shrink-0 group-hover:bg-sage-600 transition-colors">
@@ -78,7 +78,7 @@ const Contact = () => {
                   <div>
                     <p className="text-sm text-sage-500 font-medium">Email</p>
                     <p className="text-charcoal-700 group-hover:text-sage-600 transition-colors">
-                      hello@charlottelewisjones.com
+                      charlotte@greyaiadvisors.com
                     </p>
                   </div>
                 </a>
