@@ -92,13 +92,7 @@ const Hero = () => {
           >
             <Linkedin size={20} />
           </a>
-          <a
-            href="mailto:hello@charlottelewisjones.com"
-            className="p-3 rounded-full bg-sage-50 text-sage-500 hover:bg-sage-100 hover:text-sage-600 transition-all duration-300"
-            aria-label="Email"
-          >
-            <Mail size={20} />
-          </a>
+         
         </motion.div>
 
         <motion.div
