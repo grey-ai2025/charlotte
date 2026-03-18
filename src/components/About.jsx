@@ -1,4 +1,4 @@
-import { User, Briefcase, Shield, Users, Scale, Globe, BookOpen } from 'lucide-react'
+import { Briefcase, Shield, Users, Scale, Globe, BookOpen } from 'lucide-react'
 import ScrollFloat from './ScrollFloat'
 import FadeContent from './FadeContent'
 
@@ -56,10 +56,12 @@ const About = () => {
 
           <FadeContent duration={800} delay={200} threshold={0.2} blur>
             <div className="relative">
-              {/* Photo placeholder */}
-              <div className="aspect-[4/5] rounded-2xl bg-sage-50 border-2 border-dashed border-sage-200 flex flex-col items-center justify-center text-sage-300">
-                <User size={64} strokeWidth={1} />
-                <span className="mt-4 text-sm font-medium">Author Photo</span>
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden group cursor-pointer">
+                <img
+                  src="https://res.cloudinary.com/dnv13bm7j/image/upload/v1773837702/author_acyf3j.webp"
+                  alt="Charlotte Lewis Jones"
+                  className="w-full h-full object-cover rounded-2xl transition-transform duration-500 group-hover:scale-105"
+                />
               </div>
               {/* Decorative element */}
               <div className="absolute -bottom-4 -right-4 w-full h-full rounded-2xl border-2 border-sage-100 -z-10" />

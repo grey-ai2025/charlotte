@@ -1,4 +1,4 @@
-import { BookOpen, Star, Instagram, ExternalLink } from 'lucide-react'
+import { Star, Instagram, ExternalLink } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import ScrollFloat from './ScrollFloat'
 import FadeContent from './FadeContent'
@@ -21,15 +21,12 @@ const Book = () => {
           <FadeContent duration={800} threshold={0.2} blur>
             {/* Book cover placeholder */}
             <div className="relative max-w-sm mx-auto md:mx-0">
-              <div className="aspect-[3/4] rounded-2xl bg-gradient-to-br from-sage-100 to-warm-200 border border-sage-200 flex flex-col items-center justify-center p-8 shadow-soft">
-                <BookOpen size={48} className="text-sage-400 mb-4" strokeWidth={1.5} />
-                <h3 className="font-serif text-2xl font-semibold text-charcoal-800 text-center italic leading-tight">
-                  Brainy Billy<br />Builds a Bot
-                </h3>
-                <p className="mt-3 text-sm text-sage-500 font-medium">
-                  Charlotte Lewis Jones
-                </p>
-                <span className="mt-4 text-xs text-sage-400">Book Cover</span>
+              <div className="rounded-2xl overflow-hidden shadow-soft cursor-pointer group">
+                <img
+                  src="https://res.cloudinary.com/dnv13bm7j/image/upload/v1773837284/books_cover_mwkau1.avif"
+                  alt="Brainy Billy Builds a Bot - Book Cover"
+                  className="w-full rounded-2xl transition-transform duration-500 group-hover:scale-105"
+                />
               </div>
               <div className="absolute -bottom-3 -right-3 w-full h-full rounded-2xl border-2 border-sage-100 -z-10" />
             </div>
