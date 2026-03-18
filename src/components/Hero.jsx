@@ -87,12 +87,24 @@ const Hero = () => {
             href="https://linkedin.com/in/charlottelewisjones"
             target="_blank"
             rel="noopener noreferrer"
-            className="p-3 rounded-full bg-sage-50 text-sage-500 hover:bg-sage-100 hover:text-sage-600 transition-all duration-300"
+            className="p-3 rounded-full bg-sage-50 text-sage-500 hover:bg-sage-100 hover:text-sage-600 hover:scale-125 transition-all duration-300"
             aria-label="LinkedIn"
           >
             <Linkedin size={20} />
           </a>
-         
+          <a
+            href="https://greyai.ai"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-125 transition-transform duration-300"
+            aria-label="Grey AI"
+          >
+            <img
+              src="https://res.cloudinary.com/dnv13bm7j/image/upload/v1770309966/GREY_LOGO_miuq6t.svg"
+              alt="Grey AI"
+              className="h-16"
+            />
+          </a>
         </motion.div>
 
         <motion.div
