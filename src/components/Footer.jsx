@@ -3,7 +3,7 @@ import { Linkedin, Mail } from 'lucide-react'
 
 const footerLinks = [
   { label: 'Home', to: '/' },
-  { label: 'KitLit', to: '/book' },
+  { label: 'Kid Lit', to: '/book' },
   { label: 'Contact', to: '/contact' },
 ]
 
