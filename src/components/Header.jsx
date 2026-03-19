@@ -4,7 +4,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { Menu, X } from 'lucide-react'
 
 const navLinks = [
-  { label: 'Book', to: '/book' },
+  { label: 'KitLit', to: '/book' },
   
 ]
 

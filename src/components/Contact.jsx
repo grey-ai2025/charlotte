@@ -186,7 +186,6 @@ const Contact = () => {
                     >
                       <option value="" disabled>Select an inquiry type</option>
                       <option value="speaking">Speaking Engagement</option>
-                      <option value="consulting">AI Consulting</option>
                       <option value="collaboration">Collaboration</option>
                       <option value="media">Media / Press</option>
                       <option value="other">Other</option>
