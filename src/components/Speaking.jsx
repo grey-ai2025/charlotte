@@ -1,4 +1,4 @@
-import { useState, useEffect, useCallback } from 'react'
+import { useState, useEffect, useCallback, useRef } from 'react'
 import { Mic, Database, Users, AlertTriangle, Lock, Mail } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import ScrollFloat from './ScrollFloat'
@@ -11,27 +11,53 @@ const topics = [
   { icon: Lock, text: 'Tension between privacy and "good" data' },
 ]
 
+const galleryPhotos = [
+  {
+    src: 'https://res.cloudinary.com/dnv13bm7j/image/upload/v1773945687/9133b314-4cc4-421b-8ff2-5bef5530f5a2.png',
+    alt: 'Charlotte Lewis Jones at a speaking event',
+  },
+  {
+    src: 'https://res.cloudinary.com/dnv13bm7j/image/upload/v1773943825/2cf4e1c9-d509-47e6-91e5-de4d8cdfbaf4.png',
+    alt: 'Charlotte Lewis Jones at a speaking event',
+  },
+  {
+    src: 'https://res.cloudinary.com/dnv13bm7j/image/upload/v1773936697/1cbfca32-bbcf-496c-ab58-4ac69772ca6b.png',
+    alt: 'Charlotte Lewis Jones at a speaking event',
+  },
+  {
+    src: 'https://res.cloudinary.com/dnv13bm7j/image/upload/v1773936629/f87ddd37-ac51-4c84-bee8-d932a7293e66.png',
+    alt: 'Charlotte Lewis Jones at a speaking event',
+  },
+]
+
 const speakingPhotos = [
-  {
-    src: 'https://res.cloudinary.com/dnv13bm7j/image/upload/v1773892303/4419264d-1884-4aa7-b837-1fdf5fb5cdfe.png',
-    alt: 'Charlotte Lewis Jones speaking at an event',
-  },
-  {
-    src: 'https://res.cloudinary.com/dnv13bm7j/image/upload/v1773892199/ACC_conference_t4tqdl.jpg',
-    alt: 'Charlotte Lewis Jones at ACC Conference',
-  },
   {
     src: 'https://res.cloudinary.com/dnv13bm7j/image/upload/v1773892173/speking_1_pukyrt.jpg',
     alt: 'Charlotte Lewis Jones keynote presentation',
   },
+  {
+    src: 'https://res.cloudinary.com/dnv13bm7j/image/upload/v1773946509/image_pqqfoo.png',
+    alt: 'Charlotte Lewis Jones speaking at an event',
+  },
+  {
+    src: 'https://res.cloudinary.com/dnv13bm7j/image/upload/v1773946239/44e9b6ef-e9c2-4b1d-823f-b33241e3297b.png',
+    alt: 'Charlotte Lewis Jones speaking at an event',
+  },
 ]
+
+const SWIPE_THRESHOLD = 50
 
 const Speaking = () => {
   const [activeIndex, setActiveIndex] = useState(0)
   const [isPaused, setIsPaused] = useState(false)
+  const dragStart = useRef(null)
 
   const nextSlide = useCallback(() => {
     setActiveIndex((prev) => (prev + 1) % speakingPhotos.length)
+  }, [])
+
+  const prevSlide = useCallback(() => {
+    setActiveIndex((prev) => (prev - 1 + speakingPhotos.length) % speakingPhotos.length)
   }, [])
 
   useEffect(() => {
@@ -39,6 +65,20 @@ const Speaking = () => {
     const timer = setInterval(nextSlide, 4000)
     return () => clearInterval(timer)
   }, [isPaused, nextSlide])
+
+  const handlePointerDown = (e) => {
+    dragStart.current = e.clientX
+  }
+
+  const handlePointerUp = (e) => {
+    if (dragStart.current === null) return
+    const diff = dragStart.current - e.clientX
+    if (Math.abs(diff) > SWIPE_THRESHOLD) {
+      if (diff > 0) nextSlide()
+      else prevSlide()
+    }
+    dragStart.current = null
+  }
 
   return (
     <section id="speaking" className="section bg-warm-100/50">
@@ -87,19 +127,21 @@ const Speaking = () => {
           <FadeContent duration={800} delay={200} threshold={0.2} blur>
             <div className="relative">
               <div
-                className="aspect-[4/5] rounded-2xl overflow-hidden relative cursor-pointer"
+                className="aspect-[4/5] rounded-2xl overflow-hidden relative cursor-grab active:cursor-grabbing select-none touch-pan-y"
                 onMouseEnter={() => setIsPaused(true)}
                 onMouseLeave={() => setIsPaused(false)}
+                onPointerDown={handlePointerDown}
+                onPointerUp={handlePointerUp}
+                onDragStart={(e) => e.preventDefault()}
               >
                 {speakingPhotos.map((photo, i) => (
                   <img
                     key={i}
                     src={photo.src}
                     alt={photo.alt}
-                    className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out ${
-                      i === activeIndex
-                        ? 'opacity-100 scale-100'
-                        : 'opacity-0 scale-105'
+                    draggable={false}
+                    className={`absolute inset-0 w-full h-full object-cover pointer-events-none transition-opacity duration-700 ease-in-out ${
+                      i === activeIndex ? 'opacity-100' : 'opacity-0'
                     }`}
                   />
                 ))}
@@ -124,6 +166,23 @@ const Speaking = () => {
             </div>
           </FadeContent>
         </div>
+
+        <FadeContent duration={800} delay={300} threshold={0.1} blur>
+          <div className="mt-16 columns-2 md:columns-3 gap-4 space-y-4">
+            {galleryPhotos.map((photo, i) => (
+              <div
+                key={i}
+                className="break-inside-avoid rounded-xl overflow-hidden group"
+              >
+                <img
+                  src={photo.src}
+                  alt={photo.alt}
+                  className="w-full h-auto object-cover rounded-xl scale-105 transition-transform duration-500 group-hover:scale-100"
+                />
+              </div>
+            ))}
+          </div>
+        </FadeContent>
       </div>
     </section>
   )
