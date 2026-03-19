@@ -92,6 +92,19 @@ const Hero = () => {
               className="h-16"
             />
           </a>
+          <a
+            href="https://www.sunkissedpress.com/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:scale-125 transition-transform duration-300"
+            aria-label="Sunkissed Press"
+          >
+            <img
+              src="https://res.cloudinary.com/dnv13bm7j/image/upload/v1773947560/web_photo_smslns.png"
+              alt="Sunkissed Press"
+              className="h-16"
+            />
+          </a>
         </motion.div>
 
         <motion.div
