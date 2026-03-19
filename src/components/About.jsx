@@ -197,27 +197,21 @@ const About = () => {
           <FadeContent duration={800} threshold={0.2} blur>
             <div className="space-y-6">
               <p className="text-lg text-charcoal-700 leading-relaxed">
-                Charlotte Lewis Jones is a seasoned technology executive and strategic advisor
-                with deep expertise in product, privacy and AI governance. She is also a creator
-                and mother of three.
+                Charlotte Lewis Jones is a technology executive, attorney, tech founder, and author whose career sits squarely at the intersection of law, product, and AI. She brings a rare dual vantage point — as a builder and a legal counselor — to some of the most complex questions in technology today.
               </p>
               <p className="text-charcoal-700/80 leading-relaxed">
-                Charlotte is the founder of{' '}
-                <span className="font-semibold text-sage-600">Grey AI</span>, a company that
-                advises companies, funds and individuals on matters of AI strategy, literacy,
-                policy, governance and implementation.
+                Charlotte is the Founder & CEO of{' '}
+                <span className="font-semibold text-sage-600">Grey AI</span>, an AI products company building tools that help individuals, entrepreneurs, and organizations assess their AI maturity, deploy AI systems, and operate at the speed of modern business. She is also a technology attorney with 15+ years of experience advising global companies on AI governance, data privacy, product strategy, and regulatory compliance.
               </p>
               <p className="text-charcoal-700/80 leading-relaxed">
-                After working for a hardware manufacturer, Charlotte expanded into software and
-                earned her stripes as a tech lawyer at Facebook (Meta), where she counseled the
-                team building the company's first Facebook-branded hardware product, Portal —
-                a device that leveraged AI to power its smart mic and camera.
+                She has chaired AI Risk Committees, developed enterprise-wide responsible AI frameworks, and guided companies through high-stakes cybersecurity incidents, cross-border data matters, and global product launches.
               </p>
               <p className="text-charcoal-700/80 leading-relaxed">
-                She then served as a senior executive at a global SaaS company, where she built
-                and led its product, privacy and regulatory strategy and legal functions,
-                embedding innovation and direction into the company's core product and global
-                expansion strategy.
+                Before founding Grey AI, Charlotte held senior legal and operational roles at leading Silicon Valley companies, including Meta, X and others. Her work advancing inclusive AI product development at Meta earned her recognition as a California Woman Leader in Tech Law.
+              </p>
+              <p className="text-charcoal-700/80 leading-relaxed">
+                Charlotte is also a mother of three and the author of{' '}
+                <span className="italic">Brainy Billy Builds a Bot</span>, a children's book introducing AI fundamentals to the next generation of builders.
               </p>
             </div>
           </FadeContent>
