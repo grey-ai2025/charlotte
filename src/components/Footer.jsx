@@ -20,7 +20,7 @@ const Footer = () => {
               Charlotte Lewis Jones
             </Link>
             <p className="mt-1 text-sm text-charcoal-700/50">
-              Silicon Valley-trained tech legal and operations executive &middot; AI speaker since 2018 &middot; Founder of Grey AI
+              Silicon Valley–Trained Attorney. &middot; AI Founder &middot; Kid Lit Author
             </p>
           </div>
 

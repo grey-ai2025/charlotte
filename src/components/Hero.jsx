@@ -20,7 +20,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-6"
         >
-          <span className="section-label">Silicon Valley-trained tech legal and operations executive &middot; AI speaker since 2018 &middot; Founder of Grey AI</span>
+          <span className="section-label">Silicon Valley–Trained Attorney. &middot; AI Founder &middot; Kid Lit Author</span>
         </motion.div>
 
         <BlurText
