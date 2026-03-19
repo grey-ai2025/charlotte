@@ -248,13 +248,7 @@ const About = () => {
                     alt: 'Yale University',
                     school: 'Yale University',
                     degree: 'BA, Economics',
-                  },
-                  {
-                    logo: 'https://res.cloudinary.com/dnv13bm7j/image/upload/v1773893722/1631312619853_q8ugkg.jpg',
-                    alt: 'University of Southern California',
-                    school: 'USC',
-                    degree: 'Screenwriting',
-                  },
+                  }
                 ].map((edu, i) => (
                   <div
                     key={i}
