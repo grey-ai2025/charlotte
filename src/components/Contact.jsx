@@ -62,9 +62,7 @@ const Contact = () => {
           <FadeContent duration={800} threshold={0.2} blur>
             <div className="space-y-8">
               <p className="text-lg text-charcoal-700/80 leading-relaxed">
-                Whether you&apos;re interested in speaking engagements, AI consulting through
-                Grey AI, collaborations, or simply want to connect — I&apos;d love to hear
-                from you.
+                Whether you&apos;re interested in speaking engagements, collaborations, or simply want to connect — I'd love to hear from you.
               </p>
 
               <div className="space-y-5">
@@ -105,9 +103,9 @@ const Contact = () => {
                     <MessageSquare size={20} className="text-white" />
                   </div>
                   <div>
-                    <p className="text-sm text-sage-500 font-medium">Speaking & Consulting</p>
+                    <p className="text-sm text-sage-500 font-medium">Speaking</p>
                     <p className="text-charcoal-700/80">
-                      Available for keynotes, panels &amp; advisory
+                      Available for keynotes &amp; panels
                     </p>
                   </div>
                 </div>
