@@ -69,12 +69,6 @@ const Hero = () => {
           >
             Explore My Work
           </a>
-          <Link
-            to="/contact"
-            className="btn-secondary text-base"
-          >
-            Book a Consultation
-          </Link>
         </motion.div>
 
         <motion.div
