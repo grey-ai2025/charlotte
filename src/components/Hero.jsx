@@ -20,7 +20,7 @@ const Hero = () => {
           transition={{ duration: 0.8, delay: 0.2 }}
           className="mb-6"
         >
-          <span className="section-label">AI Executive &middot; Thought Leader &middot; Creator</span>
+          <span className="section-label">Silicon Valley-trained tech legal and operations executive &middot; AI speaker since 2018 &middot; Founder of Grey AI</span>
         </motion.div>
 
         <BlurText
@@ -47,14 +47,7 @@ const Hero = () => {
           />
         </div>
 
-        <motion.p
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 1.0 }}
-          className="text-sm md:text-base text-sage-500 font-medium tracking-wide mb-10"
-        >
-          Silicon Valley-trained tech legal and operations executive &middot; AI speaker since 2018 &middot; Founder of Grey AI
-        </motion.p>
+        
 
         <motion.div
           initial={{ opacity: 0, y: 20 }}

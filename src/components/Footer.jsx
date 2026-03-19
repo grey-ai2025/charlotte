@@ -3,7 +3,7 @@ import { Linkedin, Mail } from 'lucide-react'
 
 const footerLinks = [
   { label: 'Home', to: '/' },
-  { label: 'Book', to: '/book' },
+  { label: 'KitLit', to: '/book' },
   { label: 'Contact', to: '/contact' },
 ]
 
@@ -20,7 +20,7 @@ const Footer = () => {
               Charlotte Lewis Jones
             </Link>
             <p className="mt-1 text-sm text-charcoal-700/50">
-              AI Executive &middot; Thought Leader &middot; Creator
+              Silicon Valley-trained tech legal and operations executive &middot; AI speaker since 2018 &middot; Founder of Grey AI
             </p>
           </div>
 
