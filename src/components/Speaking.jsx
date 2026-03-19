@@ -1,4 +1,5 @@
-import { Mic, Database, Users, AlertTriangle, Lock, Image, Mail } from 'lucide-react'
+import { useState, useEffect, useCallback } from 'react'
+import { Mic, Database, Users, AlertTriangle, Lock, Mail } from 'lucide-react'
 import { Link } from 'react-router-dom'
 import ScrollFloat from './ScrollFloat'
 import FadeContent from './FadeContent'
@@ -10,7 +11,35 @@ const topics = [
   { icon: Lock, text: 'Tension between privacy and "good" data' },
 ]
 
+const speakingPhotos = [
+  {
+    src: 'https://res.cloudinary.com/dnv13bm7j/image/upload/v1773892303/4419264d-1884-4aa7-b837-1fdf5fb5cdfe.png',
+    alt: 'Charlotte Lewis Jones speaking at an event',
+  },
+  {
+    src: 'https://res.cloudinary.com/dnv13bm7j/image/upload/v1773892199/ACC_conference_t4tqdl.jpg',
+    alt: 'Charlotte Lewis Jones at ACC Conference',
+  },
+  {
+    src: 'https://res.cloudinary.com/dnv13bm7j/image/upload/v1773892173/speking_1_pukyrt.jpg',
+    alt: 'Charlotte Lewis Jones keynote presentation',
+  },
+]
+
 const Speaking = () => {
+  const [activeIndex, setActiveIndex] = useState(0)
+  const [isPaused, setIsPaused] = useState(false)
+
+  const nextSlide = useCallback(() => {
+    setActiveIndex((prev) => (prev + 1) % speakingPhotos.length)
+  }, [])
+
+  useEffect(() => {
+    if (isPaused) return
+    const timer = setInterval(nextSlide, 4000)
+    return () => clearInterval(timer)
+  }, [isPaused, nextSlide])
+
   return (
     <section id="speaking" className="section bg-warm-100/50">
       <div className="container">
@@ -57,10 +86,39 @@ const Speaking = () => {
 
           <FadeContent duration={800} delay={200} threshold={0.2} blur>
             <div className="relative">
-              {/* Speaking photo placeholder */}
-              <div className="aspect-[4/5] rounded-2xl bg-sage-50 border-2 border-dashed border-sage-200 flex flex-col items-center justify-center text-sage-300">
-                <Mic size={48} strokeWidth={1} />
-                <span className="mt-3 text-sm font-medium">Speaking Photo</span>
+              <div
+                className="aspect-[4/5] rounded-2xl overflow-hidden relative cursor-pointer"
+                onMouseEnter={() => setIsPaused(true)}
+                onMouseLeave={() => setIsPaused(false)}
+              >
+                {speakingPhotos.map((photo, i) => (
+                  <img
+                    key={i}
+                    src={photo.src}
+                    alt={photo.alt}
+                    className={`absolute inset-0 w-full h-full object-cover transition-all duration-700 ease-in-out ${
+                      i === activeIndex
+                        ? 'opacity-100 scale-100'
+                        : 'opacity-0 scale-105'
+                    }`}
+                  />
+                ))}
+
+                {/* Dot indicators */}
+                <div className="absolute bottom-4 left-1/2 -translate-x-1/2 flex gap-2 z-10">
+                  {speakingPhotos.map((_, i) => (
+                    <button
+                      key={i}
+                      onClick={() => setActiveIndex(i)}
+                      className={`w-2 h-2 rounded-full transition-all duration-300 ${
+                        i === activeIndex
+                          ? 'bg-white w-6'
+                          : 'bg-white/50 hover:bg-white/75'
+                      }`}
+                      aria-label={`View photo ${i + 1}`}
+                    />
+                  ))}
+                </div>
               </div>
               <div className="absolute -bottom-4 -right-4 w-full h-full rounded-2xl border-2 border-sage-100 -z-10" />
             </div>
