@@ -21,11 +21,11 @@ const galleryPhotos = [
     alt: 'Charlotte Lewis Jones at a speaking event',
   },
   {
-    src: 'https://res.cloudinary.com/dnv13bm7j/image/upload/v1773936697/1cbfca32-bbcf-496c-ab58-4ac69772ca6b.png',
+    src: 'https://res.cloudinary.com/dnv13bm7j/image/upload/v1773950565/ceda3699-30d8-47b4-836a-85cd5ccf6873.png',
     alt: 'Charlotte Lewis Jones at a speaking event',
   },
   {
-    src: 'https://res.cloudinary.com/dnv13bm7j/image/upload/v1773936629/f87ddd37-ac51-4c84-bee8-d932a7293e66.png',
+    src: 'https://res.cloudinary.com/dnv13bm7j/image/upload/v1773949910/02a32343-9d26-4ced-9b74-003d39910204.png',
     alt: 'Charlotte Lewis Jones at a speaking event',
   },
 ]
@@ -36,7 +36,7 @@ const speakingPhotos = [
     alt: 'Charlotte Lewis Jones keynote presentation',
   },
   {
-    src: 'https://res.cloudinary.com/dnv13bm7j/image/upload/v1773946509/image_pqqfoo.png',
+    src: 'https://res.cloudinary.com/dnv13bm7j/image/upload/v1773950462/cdc1d108-721e-4cca-83b6-616553b238c6.png',
     alt: 'Charlotte Lewis Jones speaking at an event',
   },
   {
