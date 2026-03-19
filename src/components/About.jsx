@@ -197,7 +197,7 @@ const About = () => {
           <FadeContent duration={800} threshold={0.2} blur>
             <div className="space-y-6">
               <p className="text-lg text-charcoal-700 leading-relaxed">
-                Charlotte Lewis Jones is a technology executive, attorney, tech founder, and author whose career sits squarely at the intersection of law, product, and AI. She brings a rare dual vantage point — as a builder and a legal counselor — to some of the most complex questions in technology today.
+                <span className="font-semibold">Charlotte Lewis Jones</span> is a technology executive, attorney, tech founder, and author whose career sits squarely at the intersection of law, product, and AI. She brings a rare dual vantage point — as a builder and a legal counselor — to some of the most complex questions in technology today.
               </p>
               <p className="text-charcoal-700/80 leading-relaxed">
                 Charlotte is the Founder & CEO of{' '}
