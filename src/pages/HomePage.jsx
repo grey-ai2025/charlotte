@@ -1,6 +1,5 @@
 import Hero from '../components/Hero'
 import About from '../components/About'
-import Experience from '../components/Experience'
 import Speaking from '../components/Speaking'
 
 const HomePage = () => {
@@ -8,7 +7,6 @@ const HomePage = () => {
     <>
       <Hero />
       <About />
-      <Experience />
       <Speaking />
     </>
   )
